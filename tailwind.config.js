@@ -15,6 +15,7 @@ module.exports = {
         },
 
         fontSize: {
+         "sm": "1rem",
          "base": "1.5rem",
          "lg": "2.25rem",
          "xl": "3rem",
@@ -27,7 +28,8 @@ module.exports = {
         },
 
         backgroundImage: {
-          "cover": "url('/cover.jpg')"
+          "cover": "url('/cover.jpg')",
+          "cover_phone": "url('/cover_phone.jpg')"
         }
     },
   },
