@@ -7,8 +7,8 @@ import { plugin, defaultConfig } from "@formkit/vue";
 import "./index.css";
 
 // A supprimer en "production"
-import { supabase } from "./supabase";
-console.log(supabase);
+// import { supabase } from "./supabase";
+// console.log(supabase);
 
 const router = createRouter({
   history: createWebHistory(),
