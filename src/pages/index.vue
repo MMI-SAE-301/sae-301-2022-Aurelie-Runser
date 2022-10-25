@@ -41,6 +41,22 @@
       </div>
     </section>
 
+    <!--Autres montres-->
+    <section>
+      <h2>Montres Tik●Tak</h2>
+      <h3 class="text-center">Portez une montre connectée, recevez des notifications, envoyez des messages, mais dans l’ambiance old school.</h3>
+
+      <div class="my-10 py-5 carousel gap-x-5 w-full">
+          <card_montre class="carousel-item" image="montre1.jpg"/>
+          <card_montre class="carousel-item" image="montre2.jpg"/>
+          <card_montre class="carousel-item" image="montre3.jpg"/>
+          <card_montre class="carousel-item" image="montre4.jpg"/>
+          <card_montre class="carousel-item" image="montre5.jpg"/>
+      </div>
+
+      <bouton_fonce class="mx-auto">Voir plus</bouton_fonce>
+    </section>
+
   </div>
 </template>
 
@@ -51,5 +67,8 @@ import bouton_clair from "@/components/bouton_clair.vue"
 import bouton_fonce from "@/components/bouton_fonce.vue"
 
 import montre_profil from "@/components/montre_profil.vue"
+
+import card_montre from "@/components/card_montre.vue"
+
 
 </script>
