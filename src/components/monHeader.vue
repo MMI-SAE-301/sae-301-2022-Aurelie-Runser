@@ -1,11 +1,15 @@
 <template>
-    <nav class="z-40 w-full h-24 bg-black flex flex-row items-center justify-between px-10">
+    <nav class="z-40 w-full h-24 flex flex-row items-center justify-between px-5 md:px-10 xl:px-20">
+
+        <!--Logo-->
         <div>
             <RouterLink to="/">
-                <hr class="w-14"/>
+                <logo class="h-10 xl:h-16"/>
                 <span class="sr-only">Accueil</span>
             </RouterLink>
         </div>
+
+        <!--menu burger si phone-->
         <div>
             <button class="relative z-50 md:hidden"
                     aria-haspopup="true"
@@ -14,12 +18,12 @@
                     :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert">
 
                 <div v-if="!menuOuvert">
-                    <menuButonFerme class="w-10 h-10"/>
+                    <menuButonOuvert class="w-14 h-14"/>
                     <span class="sr-only">boutton pour ouvrir le menu</span>
                 </div>
 
                 <div v-else>
-                    <menuButonOuvert class="w-12 h-12"/>
+                    <menuButonFerme class="w-12 h-12"/>
                     <span class="sr-only">boutton pour fermer le menu</span>
                 </div>
 
@@ -28,19 +32,30 @@
 
         <!-- Menu phone -->
         <div id="menu"
-            class="fixed overflow-y-hidden -translate-y-full px-12 inset-0 bg-black motion-safe:duration-500 motion-safe:transition-transform md:hidden"
+            class="fixed overflow-y-hidden bg-tertiaire_claire -translate-y-full px-12 inset-0 motion-safe:duration-500 motion-safe:transition-transform md:hidden"
             :class="{ 'translate-y-0': menuOuvert }">
 
-            <ul class="my-24 font-h2 text-2xl text-white leading-loose">
+            <ul class="my-24 text-lg leading-[6rem]">
                 <li><RouterLink to="/" :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert"
-                        class="hover:text-gray-400 focus:text-gray-400">Accueil</RouterLink>
+                        class="hover:text-secondaire_fonce focus:text-secondaire_fonce">Accueil</RouterLink>
+                </li>
+                <li><RouterLink to="/personnalise" :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert"
+                        class="hover:text-secondaire_fonce focus:text-secondaire_fonce">Personnaliser</RouterLink>
+                </li>
+                <li><RouterLink to="/montres" :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert"
+                        class="hover:text-secondaire_fonce focus:text-secondaire_fonce">Montres</RouterLink>
+                </li>
+                <li><RouterLink to="/comptes" :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert"
+                        class="hover:text-secondaire_fonce focus:text-secondaire_fonce">Compte</RouterLink>
                 </li>
             </ul>
         </div>
 
         <!-- Menu ordi -->
-        <ul class="hidden my-2 ml-12 max-w-3xl flex-auto justify-between font-h3 text-[1.75rem] lg:text-xl text-white md:flex">
-            <li><RouterLink to="/" class="hover:text-gray-400 focus:text-gray-400">Accueil</RouterLink></li>
+        <ul class="hidden justify-end flex-auto gap-10 xl:gap-20 md:flex">
+            <li><RouterLink to="/personnalise" class="hover:text-secondaire_fonce focus:text-secondaire_fonce">Personnaliser</RouterLink></li>
+            <li><RouterLink to="/montres" class="hover:text-secondaire_fonce focus:text-secondaire_fonce">Montres</RouterLink></li>
+            <li><RouterLink to="/comptes" class="hover:text-secondaire_fonce focus:text-secondaire_fonce">Compte</RouterLink></li>
         </ul>
 
     </nav>
@@ -49,6 +64,7 @@
 <script setup lang="ts">
 import {ref} from "vue"
 
+import logo from "@/components/icons/logo.vue"
 import menuButonOuvert from "@/components/icons/menuButonOuvert.vue"
 import menuButonFerme from "@/components/icons/menuButonFerme.vue"
 
