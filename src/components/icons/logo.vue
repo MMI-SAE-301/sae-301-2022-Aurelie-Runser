@@ -12,6 +12,6 @@
     </svg>
 </template>
 
-<style>
+<style scoped>
     .cls-1,.cls-2{fill:#d9aa72;}.cls-2{stroke:#d9aa72;stroke-miterlimit:10;stroke-width:.5px;}
 </style>

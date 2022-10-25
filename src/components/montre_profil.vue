@@ -43,7 +43,7 @@
     </div>
 </template>
 
-<style>
+<style scoped>
 .cls-1,.cls-2,.cls-3{fill:#fff;}
 .cls-4{fill:#adadad;}
 .cls-4,.cls-2,.cls-5{stroke-width:.5px;}

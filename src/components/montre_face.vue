@@ -36,7 +36,7 @@
     </div>
 </template>
 
-<style>
+<style scoped>
 .cls-1,.cls-2,.cls-3{fill:#fff;}
 .cls-2,.cls-4{stroke-width:.5px;}
 .cls-2,.cls-4,.cls-3{stroke:#000;stroke-miterlimit:10;}
