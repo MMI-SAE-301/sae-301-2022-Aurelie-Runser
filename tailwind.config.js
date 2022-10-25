@@ -19,7 +19,7 @@ module.exports = {
          "base": "1.5rem",
          "lg": "2.25rem",
          "xl": "3rem",
-         "2xl": "5rem"
+         "2xl": "4rem"
         },
         
         fontFamily: {
