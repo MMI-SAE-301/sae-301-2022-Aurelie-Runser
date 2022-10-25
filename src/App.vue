@@ -3,7 +3,7 @@
 
   <!-- Affiche les pages -->
   <Suspense>
-    <router-view class="px-20" />
+    <router-view class="px-5 md:px-20" />
   </Suspense>
 
   <monFooter/>
