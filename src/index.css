@@ -8,8 +8,16 @@
         @apply bg-fond text-tertiaire_fonce
     }
 
+    section{
+        @apply px-5 md:px-20 my-20
+    }
+
     nav{
         @apply bg-tertiaire_claire font-palatino-linotype font-bold italic text-tonic text-base xl:text-lg
+    }
+
+    h2{
+        @apply font-palatino-linotype font-bold italic text-2xl text-tonic
     }
 
 }
