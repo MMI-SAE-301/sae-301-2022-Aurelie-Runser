@@ -3,10 +3,13 @@
 
   <!-- Affiche les pages -->
   <Suspense>
-    <router-view class="m-2 border-2 p-2" />
+    <router-view class="px-20" />
   </Suspense>
+
+  <monFooter/>
 </template>
 
 <script setup lang="ts">
 import monHeader from "@/components/monHeader.vue"
+import monFooter from "@/components/monFooter.vue"
 </script>
