@@ -76,4 +76,7 @@ import bouton_fonce from "@/components/bouton_fonce.vue"
 
 import montre_profil from "@/components/montre_profil.vue"
 
+import carrouselMontre from "@/components/carrouselMontre.vue"
+
+
 </script>
