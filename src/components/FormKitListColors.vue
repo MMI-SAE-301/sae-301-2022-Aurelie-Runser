@@ -22,9 +22,9 @@ defineProps<{
                     decorator: { $el: null},
                 }"
                 input-class="peer sr-only"                
-                options-class="my-3 flex gap-4"
+                options-class="pr-20 my-3 flex flex-wrap gap-4"
                 outer-class="my-10"
-                legend-class="font-catamaran font-semibold text-lg text-secondaire_fonce"
+                legend-class="font-catamaran font-semibold text-base md:text-lg text-secondaire_fonce"
                 >
 
                 <template #label="context">
