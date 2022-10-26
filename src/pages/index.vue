@@ -22,7 +22,7 @@
 
       <div class="flex flex-wrap justify-between gap-x-20">
 
-        <listeMontres :max="1"/>
+        <listeMontres class="hidden lg:block" :max="1"/>
 
         <div class="basis-96 flex-auto flex flex-col gap-y-10">
           <p>
