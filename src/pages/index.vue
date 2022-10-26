@@ -21,7 +21,8 @@
       <h1>Nouveau : une Tik●Tak personnalisée pour les fêtes</h1>
 
       <div class="flex flex-wrap justify-between gap-x-20">
-        <montreProfil class="hidden lg:block w-1/4"/>
+
+        <listeMontres :max="1"/>
 
         <div class="basis-96 flex-auto flex flex-col gap-y-10">
           <p>
@@ -74,9 +75,9 @@ import logo from "@/components/icons/logo.vue"
 import boutonClair from "@/components/boutonClair.vue"
 import boutonFonce from "@/components/boutonFonce.vue"
 
-import montreProfil from "@/components/montreProfil.vue"
-
 import carrouselMontre from "@/components/carrouselMontre.vue"
+
+import listeMontres from "@/components/listeMontres.vue"
 
 
 </script>
