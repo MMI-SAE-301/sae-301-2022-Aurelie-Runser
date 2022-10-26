@@ -8,6 +8,9 @@
     import { useRouter} from "vue-router";  
     import FormKitListColors from "@/components/FormKitListColors.vue";
 
+    import boutonFonce from "@/components/boutonFonce.vue"
+    import boutonClair from "@/components/boutonClair.vue"
+
     const router = useRouter();
 
     const montre = ref<montres>(props.data ?? {});
@@ -201,47 +204,27 @@
                     </FormKit>
 
                     <div>
-                        <button
-                            type="button"
+
+                        <boutonClair class="mx-auto my-10 md:my-20 text-sm md:text-base"
                             v-if="montre.id_montre"
-                            @click="($refs.dialogSupprimer as any).showModal()"
-                            class="block h-max w-max rounded bg-secondaire_claire font-catamaran font-semibold text-tertiaire_fonce 
-                                    mx-auto my-10 px-5 py-2
-                                    text-base
-                                    hover:bg-tonic checked:bg-secondaire_fonce"
-                        >
+                            @click="($refs.dialogSupprimer as any).showModal()">
                             Supprimer cette montre
-                        </button>
+                        </boutonClair>
 
                         <dialog
                             ref="dialogSupprimer"
                             @click="($event.currentTarget as any).close()">
 
-                            <button
-                                type="button"
-                                class="focus-style block h-max w-max rounded bg-secondaire_fonce font-catamaran font-semibold text-tertiaire_claire 
-                                    mx-auto my-10 md:my20
-                                    px-5 md:px-8 py-2 md:py-5
-                                    text-base md:text-lg
-                                    hover:bg-tonic
-                                    checked:bg-secondaire_claire checked:text-tertiaire_fonce
-                                "
-                            >
+                            <boutonFonce class="mx-auto">
                                 Annuler
-                            </button>
-                            
-                            <button
+                            </boutonFonce>
+
+                            <boutonClair
                                 type="button"
                                 @click="supprimerMontre()"
-                                class="focus-style block h-max w-max rounded bg-secondaire_claire font-catamaran font-semibold text-tertiaire_fonce 
-                                    mx-auto my-10 md:my20
-                                    px-5 md:px-8 py-2 md:py-5
-                                    text-base md:text-lg
-                                    hover:bg-tonic
-                                    checked:bg-secondaire_fonce checked:text-tertiaire_claire"
-                                >
+                                class="mx-auto my-10 md:my20">
                                 Confirmer la suppression
-                            </button>
+                            </boutonClair>
                         </dialog>
                     </div>
 
