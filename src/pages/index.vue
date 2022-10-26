@@ -47,11 +47,11 @@
       <h2 class="text-center">Portez une montre connectée, recevez des notifications, envoyez des messages, mais dans l’ambiance old school.</h2>
 
       <div class="my-10 py-5 carousel gap-x-5 w-full">
-          <card_montre class="carousel-item" image="montre1.jpg"/>
-          <card_montre class="carousel-item" image="montre2.jpg"/>
-          <card_montre class="carousel-item" image="montre3.jpg"/>
-          <card_montre class="carousel-item" image="montre4.jpg"/>
-          <card_montre class="carousel-item" image="montre5.jpg"/>
+          <card_montre class="carousel-item" image="montres/montre1.jpg"/>
+          <card_montre class="carousel-item" image="montres/montre2.jpg"/>
+          <card_montre class="carousel-item" image="montres/montre3.jpg"/>
+          <card_montre class="carousel-item" image="montres/montre4.jpg"/>
+          <card_montre class="carousel-item" image="montres/montre5.jpg"/>
       </div>
 
       <bouton_fonce class="mx-auto">Voir plus</bouton_fonce>
