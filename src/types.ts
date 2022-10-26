@@ -13,10 +13,24 @@ export interface montres {
     "#BC8748": "Brun claire",
     "#995D3C": "Brun",
     "#6B3112": "Brun foncé",
+    
     "#E2E2E2": "Gris",
     "#D4D1EA": "Bleu claire",
     "#7F75C5": "Bleu",
     "#595481": "Bleu foncé",
+    "#1F1E26": "Noir",
+
+    "#FFE8E8": "Rouge pâle",
+    "#E3B7B7": "Rouge claire",
+    "#E77676": "Rouge",
+    "#C54040": "Rouge foncé",
+    "#7D0505": "Rouge très foncé",
+    
+    "#D7F9E4": "Vert pâle",
+    "#B7E3C9": "Vert claire",
+    "#61BB41": "Vert",
+    "#1E7221": "Vert foncé",
+    "#045307": "Vert très foncé",
   };
   
   export const materiaux = [
