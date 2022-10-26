@@ -35,4 +35,11 @@ export interface montres {
       img: "/materiaux/bois.png",
       label: "Bois",
     },
-  ];
+];
+
+export const tailles = {
+    "24/32": "24/32 mm",
+    "28/36": "28/36 mm",
+    "36/44": "36/44 mm",
+    "42/50": "42/50 mm",
+}
