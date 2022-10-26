@@ -7,7 +7,12 @@
   
       <div class="md:w-2/3 my-10 md:my-20">
         <h1 class="my-0 font-palatino-linotype font-bold italic text-lg xl:text-xl text-secondaire_claire">Le meilleur des cadeaux, une montre unique.</h1>
-        <bouton_clair class="mx-auto my-10 md:my-18">Créer ma montre</bouton_clair>
+
+        <bouton_clair class="mx-auto my-10 md:my-18">
+          <RouterLink to="/new">
+              Créer ma montre
+            </RouterLink>          
+        </bouton_clair>
       </div>
     </div>
 
@@ -36,7 +41,12 @@
             si vous commandez avant le 15 décembre.
           </p>
 
-          <bouton_fonce class="mx-auto">Créer ma montre</bouton_fonce>
+          <bouton_fonce class="mx-auto">
+            <RouterLink to="/new">
+              Créer ma montre
+            </RouterLink>
+          </bouton_fonce>
+
         </div>
       </div>
     </section>
@@ -54,7 +64,11 @@
           <card_montre class="carousel-item" image="montres/montre5.jpg"/>
       </div>
 
-      <bouton_fonce class="mx-auto">Voir plus</bouton_fonce>
+      <bouton_fonce class="mx-auto">
+        <RouterLink to="/montres">
+          Voir plus
+        </RouterLink>
+      </bouton_fonce>
     </section>
 
   </div>
