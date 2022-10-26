@@ -16,7 +16,7 @@
         <section>
             <h1>Tik●Tak officielles</h1>
 
-            <listeMontres/>
+            <carrouselMontre/>
         </section>
     </div>
 </template>
@@ -24,8 +24,7 @@
 <script setup lang="ts">
 import { supabase, user } from '@/supabase';
 
-import bouton_fonce from "@/components/bouton_fonce.vue"
-import bouton_clair from "@/components/bouton_clair.vue"
+import carrouselMontre from "@/components/carrouselMontre.vue"
 import listeMesMontres from "@/components/listeMesMontres.vue"
 import listeMontres from "@/components/listeMontres.vue"
 
