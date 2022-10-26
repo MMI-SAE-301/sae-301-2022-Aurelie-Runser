@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 import { supabase } from "@/supabase";
-import montre_prPil from "@/components/montreProfil.vue";
+import montreProfil from "@/components/montreProfil.vue";
 
 let user = supabase.auth.user()
 
