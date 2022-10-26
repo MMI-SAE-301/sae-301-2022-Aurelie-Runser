@@ -2,7 +2,6 @@
 
 import { supabase } from "@/supabase";
 import montre_profil from "@/components/montre_profil.vue";
-import bouton_fonce from "@/components/bouton_fonce.vue"
 
 let user = supabase.auth.user()
 
