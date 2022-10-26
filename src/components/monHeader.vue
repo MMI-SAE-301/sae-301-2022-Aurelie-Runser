@@ -52,7 +52,7 @@
         </div>
 
         <!-- Menu ordi -->
-        <ul class="hidden justify-end flex-auto gap-10 xl:gap-20 md:flex">
+        <ul class="hidden justify-end gap-10 xl:gap-20 md:flex">
             <li><RouterLink to="/new" class="hover:text-secondaire_fonce focus:text-secondaire_fonce">Personnaliser</RouterLink></li>
             <li><RouterLink to="/montres" class="hover:text-secondaire_fonce focus:text-secondaire_fonce">Montres</RouterLink></li>
             <li><RouterLink to="/comptes" class="hover:text-secondaire_fonce focus:text-secondaire_fonce">Compte</RouterLink></li>
