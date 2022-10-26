@@ -1,5 +1,5 @@
 <template>
-    <div class="px-5 md:px-20 pt-20 h-screen">
+    <div class="px-5 md:px-20 pt-20">
 
         <!-- si l'utilisateur n'est pas connecté-->
         <div v-if="!user">
@@ -18,7 +18,8 @@
 
         <!--Si l'utilisateur est connecté-->
         <div v-if="user">
-            <h1>Bonjour, {{user.email}}</h1>
+            <h1>Bonjour {{user.email}}</h1>
+
 
             <div>
                 <div class="flex flex-wrap gap-x-10 items-center my-10">
@@ -27,7 +28,13 @@
                 </div>
 
                 <div>
-                    <bouton_fonce>Créer une montre</bouton_fonce>
+                    <bouton_fonce class="my-10">
+                        <RouterLink to="/new">
+                        Créer une montre
+                        </RouterLink>
+                    </bouton_fonce>
+                    
+                    <listeMesMontres/>
                 </div>
                 
             </div>
@@ -38,6 +45,7 @@
                         Se déconnecter
                 </bouton_clair>
             </div>
+
         </div>
     
         
@@ -47,6 +55,9 @@
 
 <script setup lang="ts">
 import { supabase, user } from '@/supabase';
+
 import bouton_fonce from "@/components/bouton_fonce.vue"
 import bouton_clair from "@/components/bouton_clair.vue"
+import listeMesMontres from "@/components/listeMesMontres.vue"
+
 </script>
