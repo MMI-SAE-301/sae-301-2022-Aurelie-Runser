@@ -22,8 +22,8 @@ defineProps<{
                     decorator: { $el: null},
                 }"
                 input-class="peer sr-only"                
-                options-class="pr-20 my-3 flex flex-wrap gap-4"
-                outer-class="my-10"
+                options-class="pr-20 my-3 grid grid-cols-5 gap-2"
+                outer-class="my-10 w-80"
                 legend-class="font-catamaran font-semibold text-base md:text-lg text-secondaire_fonce"
                 >
 

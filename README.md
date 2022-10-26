@@ -2,9 +2,9 @@
 
 - **Nom : Runser**
 - **Prénom : Aurélie**
-- **URL maquette Figma: [Mon Figma](https://www.figma.com/file/ZbhILjKIVQvM8K9sZS6oft/SAE-301?node-id=0%3A1)**
+- **URL maquette Figma: https://www.figma.com/file/ZbhILjKIVQvM8K9sZS6oft/SAE-301?node-id=0%3A1**
 - **URL publique du site :**
-- **URL projet Supabase :**
+- **URL projet Supabase : https://uldsnwwynbuuixmbjqqm.supabase.co**
   - [X] Avez-vous invité abdallah.makhoul@univ-fcomte.fr dans votre 'Organisation' Supabase ?
 
 # Auto-évaluation
@@ -34,8 +34,15 @@ Noté sur 40.
 - [ ] usage de Classes utilitaires (1pt)
   - lien vers sa définition
   - lien vers son usage
-- [ ] Composants graphiques (0-1-2pts)
-  - liens
+- [X] Composants graphiques (0-1-2pts)
+  - [Header](/src/components/monHeader.vue)
+  - [Footer](/src/components/monFooter.vue)
+  - [Card des montres](/src/components/card_montre.vue)
+  - [SVG de la montre de face](/src/components/montre_face.vue)
+  - [SVG de la montre de profil](/src/components/montre_profil.vue)
+  - [Bouton clair](/src/components/bouton_clair.vue)
+  - [Bouton foncé](/src/components/bouton_fonce.vue)
+
 - Technique CSS (0-1-2pts)
   - Quelles techniques (Eg. Styles graphiques (répétés) tous ajoutés par CSS et/ou
     config. Tailwind (eg. before/after avec content, background...))
@@ -54,11 +61,11 @@ Noté sur 40.
   - [ ] Mise en place avec usage de custom property pour les couleurs. Ou usage de DaisyUI AVEC thèmes perso
     - liens
 - "tailwin.config.js" (0-1-2pts)
-  - [ ] usage basique couleurs/fonts
-  - [ ] Comporte des données supplémentaires (utilisées !). Eg: "content-xxx", "bg-xxx", "grid-cols-xxx"...
-    - liens
+  - [X] usage basique couleurs/fonts
+  - [X] Comporte des données supplémentaires (utilisées !). Eg: "content-xxx", "bg-xxx", "grid-cols-xxx"...
+    - [backgroundImage](/tailwind.config.js#30)
 - Composants "accessibles" (0-1-2pts)
-  - [ ] textes "accessibles" (eg. 'sr-only')
+  - [X] textes "accessibles" (eg. 'sr-only')
   - [ ] Contenu accessible ET Usage de composants étudié pour accessibilité (Eg. HeadlessUI)
 
 [^1]: Supprimez les mentions inutiles.
