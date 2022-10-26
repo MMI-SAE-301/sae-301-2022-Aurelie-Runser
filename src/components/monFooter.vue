@@ -7,7 +7,7 @@
                     <li><RouterLink to="/"
                             class="hover:text-secondaire_fonce focus:text-secondaire_fonce">Accueil</RouterLink>
                     </li>
-                    <li><RouterLink to="/personnalise"
+                    <li><RouterLink to="/new"
                             class="hover:text-secondaire_fonce focus:text-secondaire_fonce">Personnaliser</RouterLink>
                     </li>
                     <li><RouterLink to="/montres"
