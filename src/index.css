@@ -12,10 +12,6 @@
         @apply px-5 md:px-20 my-20
     }
 
-    nav{
-        @apply bg-tertiaire_claire font-palatino-linotype font-bold italic text-tonic text-base xl:text-lg
-    }
-
     h1{
         @apply my-10 font-palatino-linotype font-bold text-tonic text-xl md:text-2xl
     }
