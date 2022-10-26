@@ -15,7 +15,7 @@
             </boutonFonce>
         </div>
 
-        <form_montre :id="id"/>
+        <formMontre :id="id"/>
         
 
     </div>
@@ -23,7 +23,7 @@
 
 <script setup lang="ts">
 import { user } from '@/supabase';
-import form_montre from "@/components/form_montre.vue"
+import formMontre from "@/components/formMontre.vue"
 import boutonFonce from "@/components/boutonFonce.vue"
 
 defineProps<{
