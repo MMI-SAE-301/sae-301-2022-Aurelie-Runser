@@ -1,0 +1,38 @@
+export interface montres {
+    bracelet?: string;
+    fermoir?: string;
+    boitier?: string;
+    boutons?: string;
+    ecran?: string;
+    aiguille?: string;
+};
+  
+  export const colors = {
+    "#FFFFFF": "Blanc",
+    "#F2E5BB": "Beige",
+    "#BC8748": "Brun claire",
+    "#995D3C": "Brun",
+    "#6B3112": "Brun foncé",
+    "#E2E2E2": "Gris",
+    "#D4D1EA": "Bleu claire",
+    "#7F75C5": "Bleu",
+    "#595481": "Bleu foncé",
+  };
+  
+  export const materiaux = [
+    {
+      value: "a2cf8ea3-b36f-4b4a-8db0-03bc2c7122b5",
+      img: "/materiaux/cuir.png",
+      label: "Cuir",
+    },
+    {
+      value: "b235fba2-83c7-4b45-b3b5-1d3e54a3be8d",
+      img: "/materiaux/metal.png",
+      label: "Métal",
+    },
+    {
+      value: "44219110-b4c8-40d5-a7b6-20ea4a0c181e",
+      img: "/materiaux/bois.png",
+      label: "Bois",
+    },
+  ];
