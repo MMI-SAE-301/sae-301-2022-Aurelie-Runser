@@ -1,64 +1,3 @@
-<script setup lang="ts">
-    import type { montres } from '@/types';
-    import { materiaux, tailles } from '@/types';
-    import {ref} from "@vue/reactivity"
-    import {supabase} from "@/supabase";
-    import { useRouter} from "vue-router";  
-    import FormKitListColors from "@/components/FormKitListColors.vue";
-    
-    import montreFace from "@/components/montreFace.vue";
-    import montreProfil from "@/components/montreProfil.vue";
-
-    import boutonFonce from "@/components/boutonFonce.vue"
-    import boutonClair from "@/components/boutonClair.vue"
-
-    const router = useRouter();
-
-    const montre = ref<montres>(props.data ?? {});
-
-    // chargement de la liste des Maison
-    const props = defineProps(["id"]);
-    if (props.id) {
-        // On charge les données de la maison
-        let { data, error } = await supabase
-        .from("montre")
-        .select("*")
-        .eq("id_montre", props.id);
-        if (error) console.log("n'a pas pu charger le table montre :", error);
-        else montre.value = (data as any[])[0];
-    }
-
-    // fonction pour ajouter dans la bdd les valeurs du formulaire
-    async function upsertMontre(dataForm, node) {
-        const { data, error } = await supabase.from("montre").upsert(dataForm);
-        if (error || !data){
-            node.setErrors([error?.message]); 
-        }
-        else {
-            node.setErrors([]);
-            router.push("/comptes");
-        }
-    };
-
-    async function supprimerMontre() {
-        const { data, error } = await supabase
-            .from("montre")
-            .delete()
-            .match({ id_montre: montre.value.id_montre });
-        if (error) {
-            console.error(
-            "Erreur à la suppression de ",
-            montre.value,
-            "erreur :",
-            error
-            );
-        } else {
-            router.push("/comptes");
-        }
-    }
-
-</script>
-
 <template>
     <div class="flex justify-between gap-10 flex-col md:flex-row">
         <div class="sticky h-full top-0 lg:top-20 pb-10 bg-fond">
@@ -234,4 +173,63 @@
             </div>
 </template>
 
+<script setup lang="ts">
+    import type { montres } from '@/types';
+    import { materiaux, tailles } from '@/types';
+    import {ref} from "@vue/reactivity"
+    import {supabase} from "@/supabase";
+    import { useRouter} from "vue-router";  
+    import FormKitListColors from "@/components/FormKitListColors.vue";
+    
+    import montreFace from "@/components/montreFace.vue";
+    import montreProfil from "@/components/montreProfil.vue";
 
+    import boutonFonce from "@/components/boutonFonce.vue"
+    import boutonClair from "@/components/boutonClair.vue"
+
+    const router = useRouter();
+
+    const montre = ref<montres>(props.data ?? {});
+
+    // chargement de la liste des Maison
+    const props = defineProps(["id"]);
+    if (props.id) {
+        // On charge les données de la maison
+        let { data, error } = await supabase
+        .from("montre")
+        .select("*")
+        .eq("id_montre", props.id);
+        if (error) console.log("n'a pas pu charger le table montre :", error);
+        else montre.value = (data as any[])[0];
+    }
+
+    // fonction pour ajouter dans la bdd les valeurs du formulaire
+    async function upsertMontre(dataForm, node) {
+        const { data, error } = await supabase.from("montre").upsert(dataForm);
+        if (error || !data){
+            node.setErrors([error?.message]); 
+        }
+        else {
+            node.setErrors([]);
+            router.push("/comptes");
+        }
+    };
+
+    async function supprimerMontre() {
+        const { data, error } = await supabase
+            .from("montre")
+            .delete()
+            .match({ id_montre: montre.value.id_montre });
+        if (error) {
+            console.error(
+            "Erreur à la suppression de ",
+            montre.value,
+            "erreur :",
+            error
+            );
+        } else {
+            router.push("/comptes");
+        }
+    }
+
+</script>
