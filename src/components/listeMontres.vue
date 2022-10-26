@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 import { supabase } from "@/supabase";
-import montre_profil from "@/components/montre_profil.vue";
+import montreProfil from "@/components/montreProfil.vue";
 
 let user = supabase.auth.user()
 
@@ -30,7 +30,7 @@ const { data: montres, error } = await supabase
         <montre_profil class="w-36 md:w-64" v-bind="m" />
       </router-link>
 
-      <montre_profil v-else class="w-36 md:w-64" v-bind="m" />
+      <montreProfil v-else class="w-36 md:w-64" v-bind="m" />
     </li>
 
   </ul>
