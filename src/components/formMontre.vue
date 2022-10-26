@@ -2,11 +2,12 @@
     import type { montres } from '@/types';
     import { materiaux, tailles } from '@/types';
     import {ref} from "@vue/reactivity"
-    import montre_face from "@/components/montre_face.vue";
-    import montre_profil from "@/components/montre_profil.vue";
     import {supabase} from "@/supabase";
     import { useRouter} from "vue-router";  
     import FormKitListColors from "@/components/FormKitListColors.vue";
+    
+    import montreFace from "@/components/montreFace.vue";
+    import montre_profil from "@/components/montre_profil.vue";
 
     import boutonFonce from "@/components/boutonFonce.vue"
     import boutonClair from "@/components/boutonClair.vue"
@@ -65,7 +66,7 @@
             
             <div class="sticky w-full md:w-80 lg:w-96 xl:w-auto
                     flex carousel">
-                <montre_face class="flex-initial basis-60 md:flex-none md:w-64 lg:w-72 carousel-item" v-bind="montre" id="face"/>
+                <montreFace class="flex-initial basis-60 md:flex-none md:w-64 lg:w-72 carousel-item" v-bind="montre" id="face"/>
                 <montre_profil class="flex-initial basis-60 md:flex-none md:w-64 lg:w-72 carousel-item" v-bind="montre" id="dessus"/>
             </div>
         </div>
