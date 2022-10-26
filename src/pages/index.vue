@@ -6,14 +6,14 @@
       <logo class="h-16 md:h-32 xl:h-40"/>
   
       <div class="md:w-2/3 my-10 md:my-20">
-        <h2 class="my-0 font-palatino-linotype font-bold italic text-lg xl:text-xl text-secondaire_claire">Le meilleur des cadeaux, une montre unique.</h2>
+        <h1 class="my-0 font-palatino-linotype font-bold italic text-lg xl:text-xl text-secondaire_claire">Le meilleur des cadeaux, une montre unique.</h1>
         <bouton_clair class="mx-auto my-10 md:my-18">Créer ma montre</bouton_clair>
       </div>
     </div>
 
     <!--Personnalisation-->
     <section>
-      <h2>Nouveau : une Tik●Tak personnalisée pour les fêtes</h2>
+      <h1>Nouveau : une Tik●Tak personnalisée pour les fêtes</h1>
 
       <div class="flex flex-wrap justify-between gap-x-20">
         <montre_profil class="hidden lg:block w-1/4"/>
@@ -43,8 +43,8 @@
 
     <!--Autres montres-->
     <section>
-      <h2>Montres Tik●Tak</h2>
-      <h3 class="text-center">Portez une montre connectée, recevez des notifications, envoyez des messages, mais dans l’ambiance old school.</h3>
+      <h1>Montres Tik●Tak</h1>
+      <h2 class="text-center">Portez une montre connectée, recevez des notifications, envoyez des messages, mais dans l’ambiance old school.</h2>
 
       <div class="my-10 py-5 carousel gap-x-5 w-full">
           <card_montre class="carousel-item" image="montre1.jpg"/>
