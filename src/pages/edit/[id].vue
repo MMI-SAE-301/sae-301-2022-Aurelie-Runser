@@ -8,11 +8,11 @@
         <div v-if="!user" class="flex flex-wrap gap-10 justify-between items-center">
             <p class="flex-auto basis-96 font-extrabold">Attention, vous devez être connecté(e) pour créer et commander une montre.</p>
 
-            <bouton_fonce class="mx-auto">
+            <boutonFonce class="mx-auto">
                 <RouterLink to="/comptes">
                     Se connecter
                 </RouterLink>
-            </bouton_fonce>
+            </boutonFonce>
         </div>
 
         <form_montre :id="id"/>
@@ -24,7 +24,7 @@
 <script setup lang="ts">
 import { user } from '@/supabase';
 import form_montre from "@/components/form_montre.vue"
-import bouton_fonce from "@/components/bouton_fonce.vue"
+import boutonFonce from "@/components/boutonFonce.vue"
 
 defineProps<{
   id: string;

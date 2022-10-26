@@ -28,11 +28,11 @@
                 </div>
 
                 <div>
-                    <bouton_fonce class="my-10">
+                    <boutonFonce class="my-10">
                         <RouterLink to="/new">
                         Créer une montre
                         </RouterLink>
-                    </bouton_fonce>
+                    </boutonFonce>
                     
                     <listeMesMontres/>
                 </div>
@@ -56,7 +56,7 @@
 <script setup lang="ts">
 import { supabase, user } from '@/supabase';
 
-import bouton_fonce from "@/components/bouton_fonce.vue"
+import boutonFonce from "@/components/boutonFonce.vue"
 import boutonClair from "@/components/boutonClair.vue"
 import listeMesMontres from "@/components/listeMesMontres.vue"
 

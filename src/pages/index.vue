@@ -41,11 +41,11 @@
             si vous commandez avant le 15 décembre.
           </p>
 
-          <bouton_fonce class="mx-auto">
+          <boutonFonce class="mx-auto">
             <RouterLink to="/new">
               Créer ma montre
             </RouterLink>
-          </bouton_fonce>
+          </boutonFonce>
 
         </div>
       </div>
@@ -58,11 +58,11 @@
 
       <carrouselMontre/>
 
-      <bouton_fonce class="mx-auto">
+      <boutonFonce class="mx-auto">
         <RouterLink to="/montres">
           Voir plus
         </RouterLink>
-      </bouton_fonce>
+      </boutonFonce>
     </section>
 
   </div>
@@ -72,7 +72,7 @@
 import logo from "@/components/icons/logo.vue"
 
 import boutonClair from "@/components/boutonClair.vue"
-import bouton_fonce from "@/components/bouton_fonce.vue"
+import boutonFonce from "@/components/boutonFonce.vue"
 
 import montre_profil from "@/components/montre_profil.vue"
 
