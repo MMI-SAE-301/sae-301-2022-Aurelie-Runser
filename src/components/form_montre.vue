@@ -8,8 +8,6 @@
     import { useRouter} from "vue-router";  
     import FormKitListColors from "@/components/FormKitListColors.vue";
 
-    let user = supabase.auth.user()
-
     const router = useRouter();
 
     const montre = ref<montres>(props.data ?? {});
@@ -34,28 +32,26 @@
         }
         else {
             node.setErrors([]);
-            router.push("/");
+            router.push("/comptes");
         }
     };
 
-    
-
-    // async function supprimerChaussure() {
-    //     const { data, error } = await supabase
-    //         .from("montre")
-    //         .delete()
-    //         .match({ id_montre: montre.value.id_montre });
-    //     if (error) {
-    //         console.error(
-    //         "Erreur à la suppression de ",
-    //         montre.value,
-    //         "erreur :",
-    //         error
-    //         );
-    //     } else {
-    //         router.push("/");
-    //     }
-    // }
+    async function supprimerMontre() {
+        const { data, error } = await supabase
+            .from("montre")
+            .delete()
+            .match({ id_montre: montre.value.id_montre });
+        if (error) {
+            console.error(
+            "Erreur à la suppression de ",
+            montre.value,
+            "erreur :",
+            error
+            );
+        } else {
+            router.push("/comptes");
+        }
+    }
 
 </script>
 
@@ -65,13 +61,13 @@
             <h2 class="flex-none w-full">Votre montre</h2>
             
             <div class="sticky w-full md:w-80 lg:w-96 xl:w-auto
-                    flex md:carousel">
-                <montre_face class="w-1/2 md:w-72 lg:w-80 carousel-item" v-bind="montre" id="face"/>
-                <montre_profil class="w-1/2 md:w-72 lg:w-80 carousel-item" v-bind="montre" id="dessus"/>
+                    flex carousel">
+                <montre_face class="flex-initial basis-60 md:flex-none md:w-64 lg:w-72 carousel-item" v-bind="montre" id="face"/>
+                <montre_profil class="flex-initial basis-60 md:flex-none md:w-64 lg:w-72 carousel-item" v-bind="montre" id="dessus"/>
             </div>
         </div>
 
-                <div class="flex-initial basis-1/2">
+                <div class="flex-initial basis-2/5">
 
                     <h2>Vos choix</h2>
                     <FormKit
@@ -125,7 +121,7 @@
 
                         <FormKit 
                             name="id_materiau"   
-                            label="Materiau du bracelet et boitier"   
+                            label="Matériau du bracelet et boitier"   
                             type="radio" 
                             value="a2cf8ea3-b36f-4b4a-8db0-03bc2c7122b5"
                             :options="materiaux"
@@ -169,15 +165,14 @@
                                         peer-checked:bg-secondaire_claire peer-checked:text-tertiaire_fonce"
                         />
 
-
                         <div class="my-10">
                             <h2>Commander dès maintenant</h2>
 
                             <p class="my-5">Garantis
                                 <span>livré avant noël</span>
-                                si vous commander votre montre avant le 15 décembre.
+                                si vous commandez votre montre avant le 15 décembre.
                             </p>
-                            <p class="my-5 font-extrabold">Satisfait ou Remboursé</p>
+                            <p class="my-5 font-extrabold">Satisfait ou Remboursé.</p>
 
 
                             <FormKit
@@ -203,17 +198,19 @@
                             
                         </div>
 
-                        </FormKit>
+                    </FormKit>
 
-                    <!-- <div>
+                    <div>
                         <button
                             type="button"
-                            v-if="chaussure.id_chaussure"
+                            v-if="montre.id_montre"
                             @click="($refs.dialogSupprimer as any).showModal()"
-                            class="focus-style block mx-auto p-2 rounded-md bg-red-200 text-base
-                                hover:bg-red-500 hover:text-white transition duration-200
-                                checked:bg-red-800">
-                            Supprimer la paire
+                            class="block h-max w-max rounded bg-secondaire_claire font-catamaran font-semibold text-tertiaire_fonce 
+                                    mx-auto my-10 px-5 py-2
+                                    text-base
+                                    hover:bg-tonic checked:bg-secondaire_fonce"
+                        >
+                            Supprimer cette montre
                         </button>
 
                         <dialog
@@ -222,22 +219,32 @@
 
                             <button
                                 type="button"
-                                class="focus-style block mx-auto mt-2 mb-5 rounded-md bg-blue-300 p-2 text-xl
-                                    hover:bg-blue-500 hover:text-white transition duration-200
-                                    checked:bg-blue-800">
+                                class="focus-style block h-max w-max rounded bg-secondaire_fonce font-catamaran font-semibold text-tertiaire_claire 
+                                    mx-auto my-10 md:my20
+                                    px-5 md:px-8 py-2 md:py-5
+                                    text-base md:text-lg
+                                    hover:bg-tonic
+                                    checked:bg-secondaire_claire checked:text-tertiaire_fonce
+                                "
+                            >
                                 Annuler
                             </button>
                             
                             <button
                                 type="button"
-                                @click="supprimerChaussure()"
-                                class="focus-style block mx-auto mt-5 mb-2 p-2 rounded-md bg-red-200 text-xl
-                                    hover:bg-red-500 hover:text-white transition duration-200
-                                    checked:bg-red-800">
+                                @click="supprimerMontre()"
+                                class="focus-style block h-max w-max rounded bg-secondaire_claire font-catamaran font-semibold text-tertiaire_fonce 
+                                    mx-auto my-10 md:my20
+                                    px-5 md:px-8 py-2 md:py-5
+                                    text-base md:text-lg
+                                    hover:bg-tonic
+                                    checked:bg-secondaire_fonce checked:text-tertiaire_claire"
+                                >
                                 Confirmer la suppression
                             </button>
                         </dialog>
-                    </div> -->
+                    </div>
+
                 </div>
 
             </div>
