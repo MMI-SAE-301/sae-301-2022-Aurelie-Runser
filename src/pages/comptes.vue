@@ -40,10 +40,10 @@
             </div>
 
             <div class="flex justify-end my-20">
-                <bouton_clair class="md:text-base"
+                <boutonClair class="md:text-base"
                     @pointerdown="supabase.auth.signOut()">
                         Se déconnecter
-                </bouton_clair>
+                </boutonClair>
             </div>
 
         </div>
@@ -57,7 +57,7 @@
 import { supabase, user } from '@/supabase';
 
 import bouton_fonce from "@/components/bouton_fonce.vue"
-import bouton_clair from "@/components/bouton_clair.vue"
+import boutonClair from "@/components/boutonClair.vue"
 import listeMesMontres from "@/components/listeMesMontres.vue"
 
 </script>

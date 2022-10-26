@@ -8,11 +8,11 @@
       <div class="md:w-2/3 my-10 md:my-20">
         <h1 class="my-0 font-palatino-linotype font-bold italic text-lg xl:text-xl text-secondaire_claire">Le meilleur des cadeaux, une montre unique.</h1>
 
-        <bouton_clair class="mx-auto my-10 md:my-18">
+        <boutonClair class="mx-auto my-10 md:my-18">
           <RouterLink to="/new">
               Créer ma montre
             </RouterLink>          
-        </bouton_clair>
+        </boutonClair>
       </div>
     </div>
 
@@ -71,7 +71,7 @@
 <script setup lang="ts">
 import logo from "@/components/icons/logo.vue"
 
-import bouton_clair from "@/components/bouton_clair.vue"
+import boutonClair from "@/components/boutonClair.vue"
 import bouton_fonce from "@/components/bouton_fonce.vue"
 
 import montre_profil from "@/components/montre_profil.vue"
