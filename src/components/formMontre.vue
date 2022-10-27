@@ -1,5 +1,6 @@
 <template>
     <div class="flex justify-between gap-10 flex-col md:flex-row">
+
         <div class="sticky h-full top-0 lg:top-20 pb-10 bg-fond dark:bg-fond-dark_mode">
             <h2 class="flex-none w-full">Votre montre</h2>
             
@@ -173,6 +174,10 @@
                             
                         </div>
 
+                        <!-- si l'utilisateur à deja commander sa montre-->
+                        <p v-if="montre.commande" class="w-full my-20 px-5 py-10 font-extrabold text-center bg-secondaire_claire dark:bg-se">Cette montre est commandé, vous ne pouvez plus la modifier.</p>
+
+
                     </FormKit>
 
                     <div>
@@ -236,6 +241,7 @@
     }
 
     // fonction pour ajouter dans la bdd les valeurs du formulaire
+    // @ts-ignore
     async function upsertMontre(dataForm, node) {
         const { data, error } = await supabase.from("montre").upsert(dataForm);
         if (error || !data){
@@ -247,6 +253,7 @@
         }
     };
 
+    
     async function supprimerMontre() {
         const { data, error } = await supabase
             .from("montre")
