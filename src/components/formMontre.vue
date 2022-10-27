@@ -103,7 +103,7 @@
                             }"
                             input-class="peer sr-only"
                             outer-class="my-10"
-                            legend-class="my-5 font-palatino-linotype font-bold italic text-secondaire_fonce text-lg md:text-xl"
+                            legend-class="my-5 font-palatino-linotype font-bold italic text-secondaire_fonce dark:text-secondaire_claire text-lg md:text-xl"
                             options-class="w-max grid grid-cols-2 gap-x-3 gap-y-1"
                             label-class="block w-max rounded font-catamaran font-semibold 
                                         px-5 py-2 text-base
