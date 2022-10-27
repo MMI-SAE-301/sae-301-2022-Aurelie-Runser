@@ -56,7 +56,10 @@ Noté sur 40.
 - Technique CSS (0-1-2pts)
   - Quelles techniques (Eg. Styles graphiques (répétés) tous ajoutés par CSS et/ou
     config. Tailwind (eg. before/after avec content, background...))
-    - [backgroundImage](/tailwind.config.js#30), [utilisé ici](/src/pages/index.vue#5)
+    - [Couleurs](/tailwind.config.js#L8)
+    - [Fonts Size](/tailwind.config.js#L19)
+    - [Fonts Family](/tailwind.config.js#L27)
+    - [Background Image](/tailwind.config.js#L32)
 
 - Mise en page CSS (0-1-2pts)
   - Quelles techniques (Grilles Flex...)
@@ -85,15 +88,15 @@ Noté sur 40.
     - lg, [un exemple](src/pages/index.vue#L5)
     - xl, [un exemple](src/components/monHeader.vue#L7)
 
-- [ ] Dark Mode (0-1-2pts)
-  - [ ] Simple usage de 'dark:'
+- [X] Dark Mode (0-1-2pts)
+  - [X] Simple usage de 'dark:'
   - [ ] Mise en place avec usage de custom property pour les couleurs. Ou usage de DaisyUI AVEC thèmes perso
     - liens
 
 - "tailwin.config.js" (0-1-2pts)
   - [ ] usage basique couleurs/fonts
-  - [ ] Comporte des données supplémentaires (utilisées !). Eg: "content-xxx", "bg-xxx", "grid-cols-xxx"...
-    - 
+  - [X] Comporte des données supplémentaires (utilisées !). Eg: "content-xxx", "bg-xxx", "grid-cols-xxx"...
+    - [backgroundImage](/tailwind.config.js#L32), [utilisé ici](/src/pages/index.vue#L5)
 
 - Composants "accessibles" (0-1-2pts)
   - [X] textes "accessibles" (eg. 'sr-only')
