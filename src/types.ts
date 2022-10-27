@@ -1,4 +1,6 @@
 export interface montres {
+    id_montre?:string;
+    commande?:boolean;
     bracelet?: string;
     fermoir?: string;
     boitier?: string;
