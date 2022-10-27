@@ -11,9 +11,11 @@
 --     id_montre            uuid not null primary key,
 --     bracelet             varchar(255) not null default'#FFFFFF',
 --     boitier              varchar(255) not null default'#FFFFFF',
---     boitier_rond         varchar(255) not null default'#FFFFFF',
 --     ecran                varchar(255) not null default'#FFFFFF',
---     taille               varchar(255) not null,
+--     fermoir              varchar(255) not null default'#FFFFFF',
+--     aiguille             varchar(255) not null default'#FFFFFF',
+--     boutons              varchar(255) not null default'#FFFFFF',
+--     taille               varchar(255) not null default'24/32',
 --     commande             bool not null default'false',
 --     id_utilisateur       uuid not null,
 --     id_materiau          uuid not null,
@@ -26,7 +28,7 @@
 --
 -- create view montre_all_info as
 --     select  id_montre, id_utilisateur,
---             bracelet, boitier, boitier_rond, ecran,
+--             bracelet, boitier, ecran, fermoir, aiguille, boutons, taille,
 --             montre.id_materiau, libelle_materiau, url_materiau,
 --             commande
 --     from montre, materiau
@@ -38,6 +40,24 @@
 --     from montre
 --     where commande = true
 --     group by id_utilisateur, id_montre
+-- ;
+
+-- create view montre_cuir as
+--     select id_montre
+--     from montre
+--     where id_materiau = 'a2cf8ea3-b36f-4b4a-8db0-03bc2c7122b5'
+-- ;
+
+-- create view montre_bois as
+--     select id_montre
+--     from montre
+--     where id_materiau = '44219110-b4c8-40d5-a7b6-20ea4a0c181e'
+-- ;
+
+-- create view montre_metal as
+--     select id_montre
+--     from montre
+--     where id_materiau = 'b235fba2-83c7-4b45-b3b5-1d3e54a3be8d'
 -- ;
 
 --
