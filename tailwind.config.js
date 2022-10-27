@@ -7,12 +7,13 @@ module.exports = {
     extend: {
         colors: {
          "fond": "#fafafa",
+         "fond-dark_mode": "#171717",
          "tonic": "#bc8748",
-         "tonic-dark_mode": "#D9AA72",
-         "secondaire_claire": "#f2e5bb",
+         "tonic-dark_mode": "#d9aa72",
+         "secondaire_claire": "#f3de99",
          "secondaire_fonce": "#995d3c",
          "tertiaire_fonce": "#1f1e26",
-         "tertiaire_claire": "#F0F0EF"
+         "tertiaire_claire": "#f0f0ef"
         },
 
         fontSize: {
