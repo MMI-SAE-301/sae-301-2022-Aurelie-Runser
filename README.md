@@ -3,7 +3,7 @@
 - **Nom : Runser**
 - **Prénom : Aurélie**
 - **URL maquette Figma: https://www.figma.com/file/ZbhILjKIVQvM8K9sZS6oft/SAE-301?node-id=0%3A1**
-- **URL publique du site :**
+- **URL publique du site : https://sae301-aurelierunser-b2.netlify.app/**
 - **URL projet Supabase : https://uldsnwwynbuuixmbjqqm.supabase.co**
   - [X] Avez-vous invité abdallah.makhoul@univ-fcomte.fr dans votre 'Organisation' Supabase ?
 
