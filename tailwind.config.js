@@ -8,10 +8,11 @@ module.exports = {
         colors: {
          "fond": "#fafafa",
          "tonic": "#bc8748",
+         "tonic-dark_mode": "#D9AA72",
          "secondaire_claire": "#f2e5bb",
          "secondaire_fonce": "#995d3c",
          "tertiaire_fonce": "#1f1e26",
-         "tertiaire_claire": "#f6f6f6"
+         "tertiaire_claire": "#F0F0EF"
         },
 
         fontSize: {
