@@ -174,7 +174,8 @@
                             
                         </div>
 
-                        <!-- si l'utilisateur à deja commander sa montre-->
+                        <!-- si l'utilisateur à déjà commandé sa montre-->
+                        
                         <p v-if="montre.commande" class="w-full my-20 px-5 py-10 font-extrabold text-center bg-secondaire_claire dark:bg-se">Cette montre est commandé, vous ne pouvez plus la modifier.</p>
 
 
@@ -226,6 +227,7 @@
 
     const router = useRouter();
 
+    // @ts-ignore
     const montre = ref<montres>(props.data ?? {});
 
     // chargement de la liste des Maison
@@ -253,11 +255,11 @@
         }
     };
 
-    
     async function supprimerMontre() {
         const { data, error } = await supabase
             .from("montre")
             .delete()
+            // @ts-ignore
             .match({ id_montre: montre.value.id_montre });
         if (error) {
             console.error(
