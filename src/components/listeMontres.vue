@@ -25,12 +25,10 @@ const { data: montres, error } = await supabase
 
     <li v-for="m in montres" :key="m.id">
       <router-link
-      :to="`/edit/${m.id_montre}`"
-        v-if="user.id == m.id_utilisateur">
+      :to="`/edit/${m.id_montre}`">
         <montreProfil class="w-36 md:w-64" v-bind="m" />
       </router-link>
 
-      <montreProfil v-else class="w-36 md:w-64" v-bind="m" />
     </li>
 
   </ul>
