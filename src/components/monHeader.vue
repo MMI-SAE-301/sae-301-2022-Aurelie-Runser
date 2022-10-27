@@ -1,6 +1,8 @@
 <template>
     <nav class="fixed z-40 w-full h-24 flex flex-row items-center justify-between px-5 md:px-10 xl:px-20
-            bg-tertiaire_claire font-palatino-linotype font-bold italic text-tonic text-base xl:text-lg">
+            font-palatino-linotype font-bold italic text-base xl:text-lg
+            bg-tertiaire_claire text-tonic
+            dark:bg-tertiaire_fonce dark:text-tonic-dark_mode">
 
         <!--Logo-->
         <div>
@@ -33,30 +35,73 @@
 
         <!-- Menu phone -->
         <div id="menu"
-            class="fixed overflow-y-hidden bg-tertiaire_claire -translate-y-full px-12 inset-0 motion-safe:duration-500 motion-safe:transition-transform md:hidden"
+            class="fixed overflow-y-hidden -translate-y-full px-12 inset-0 motion-safe:duration-500 motion-safe:transition-transform md:hidden
+                bg-tertiaire_claire dark:bg-tertiaire_fonce"
             :class="{ 'translate-y-0': menuOuvert }">
 
             <ul class="my-24 text-lg leading-[6rem]">
-                <li><RouterLink to="/" :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert"
-                        class="hover:text-secondaire_fonce focus:text-secondaire_fonce">Accueil</RouterLink>
+                <li>
+                    <RouterLink to="/" :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert"
+                        class="hover:text-secondaire_fonce focus:text-secondaire_fonce
+                                dark:hover:text-secondaire_claire dark:focus:text-secondaire_claire">
+                        Accueil
+                    </RouterLink>
                 </li>
-                <li><RouterLink to="/new" :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert"
-                        class="hover:text-secondaire_fonce focus:text-secondaire_fonce">Personnaliser</RouterLink>
+
+                <li>
+                    <RouterLink to="/new" :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert"
+                        class="hover:text-secondaire_fonce focus:text-secondaire_fonce
+                                dark:hover:text-secondaire_claire dark:focus:text-secondaire_claire">
+                        Personnaliser
+                    </RouterLink>
                 </li>
-                <li><RouterLink to="/montres" :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert"
-                        class="hover:text-secondaire_fonce focus:text-secondaire_fonce">Montres</RouterLink>
+
+                <li>
+                    <RouterLink to="/montres" :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert"
+                        class="hover:text-secondaire_fonce focus:text-secondaire_fonce
+                                dark:hover:text-secondaire_claire dark:focus:text-secondaire_claire">
+                        Montres
+                    </RouterLink>
                 </li>
-                <li><RouterLink to="/comptes" :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert"
-                        class="hover:text-secondaire_fonce focus:text-secondaire_fonce">Compte</RouterLink>
+
+                <li>
+                    <RouterLink to="/comptes" :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert"
+                        class="hover:text-secondaire_fonce focus:text-secondaire_fonce
+                                dark:hover:text-secondaire_claire dark:focus:text-secondaire_claire">
+                        Compte
+                    </RouterLink>
                 </li>
+
             </ul>
         </div>
 
         <!-- Menu ordi -->
         <ul class="hidden justify-end gap-10 xl:gap-20 md:flex">
-            <li><RouterLink to="/new" class="hover:text-secondaire_fonce focus:text-secondaire_fonce">Personnaliser</RouterLink></li>
-            <li><RouterLink to="/montres" class="hover:text-secondaire_fonce focus:text-secondaire_fonce">Montres</RouterLink></li>
-            <li><RouterLink to="/comptes" class="hover:text-secondaire_fonce focus:text-secondaire_fonce">Compte</RouterLink></li>
+            <li>
+                <RouterLink to="/new"
+                    class="hover:text-secondaire_fonce focus:text-secondaire_fonce
+                        dark:hover:text-secondaire_claire dark:focus:text-secondaire_claire">
+                    Personnaliser
+            </RouterLink>
+
+            </li>
+
+            <li>
+                <RouterLink to="/montres"
+                    class="hover:text-secondaire_fonce focus:text-secondaire_fonce
+                        dark:hover:text-secondaire_claire dark:focus:text-secondaire_claire">
+                    Montres
+            </RouterLink>
+            </li>
+
+            <li>
+                <RouterLink to="/comptes"
+                    class="hover:text-secondaire_fonce focus:text-secondaire_fonce
+                        dark:hover:text-secondaire_claire dark:focus:text-secondaire_claire">
+                    Compte
+            </RouterLink>
+            </li>
+
         </ul>
 
     </nav>

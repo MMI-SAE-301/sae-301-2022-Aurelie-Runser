@@ -1,5 +1,7 @@
 <template>
-    <div class="w-full p-20 bg-tertiaire_claire text-tertiaire_fonce">
+    <div class="w-full p-20 
+            bg-tertiaire_claire dark:bg-tertiaire_fonce
+            text-tertiaire_fonce dark:text-tertiaire_claire">
         <div class="w-full flex flex-wrap justify-between gap-10">
 
             <div class="w-max font-catamaran font-medium text-base">

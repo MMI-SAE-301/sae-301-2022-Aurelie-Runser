@@ -5,7 +5,7 @@
 
 @layer base{
     body{
-        @apply bg-fond text-tertiaire_fonce
+        @apply bg-fond dark:bg-fond-dark_mode
     }
 
     section{
@@ -13,15 +13,15 @@
     }
 
     h1{
-        @apply my-10 font-palatino-linotype font-bold text-tonic text-xl md:text-2xl
+        @apply my-10 font-palatino-linotype font-bold text-xl md:text-2xl text-tonic dark:text-tonic-dark_mode
     }
 
     h2{
-        @apply my-10 font-palatino-linotype font-bold italic text-secondaire_fonce text-lg md:text-xl
+        @apply my-10 font-palatino-linotype font-bold italic text-lg md:text-xl text-secondaire_fonce dark:text-secondaire_claire
     }
 
     p{
-        @apply text-sm md:text-base text-tertiaire_fonce
+        @apply text-sm md:text-base text-tertiaire_fonce dark:text-tertiaire_claire
     }
 
     span{

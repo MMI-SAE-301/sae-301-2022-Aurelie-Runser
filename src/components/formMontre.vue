@@ -1,6 +1,6 @@
 <template>
     <div class="flex justify-between gap-10 flex-col md:flex-row">
-        <div class="sticky h-full top-0 lg:top-20 pb-10 bg-fond">
+        <div class="sticky h-full top-0 lg:top-20 pb-10 bg-fond dark:bg-fond-dark_mode">
             <h2 class="flex-none w-full">Votre montre</h2>
             
             <div class="sticky w-full md:w-80 lg:w-96 xl:w-auto
@@ -22,11 +22,14 @@
                         @submit="upsertMontre"
                         :submit-attrs="{
                             classes:{
-                                input: `w-full rounded bg-secondaire_fonce font-catamaran font-semibold text-tertiaire_claire 
+                                input: `w-full rounded font-catamaran font-semibold 
                                         my-10 p-5
                                         text-base md:text-lg
-                                        hover:bg-tonic 
-                                        peer-checked:bg-secondaire_claire`
+                                        bg-secondaire_fonce
+                                        hover:bg-tonic text-tertiaire_claire 
+                                        peer-checked:bg-secondaire_claire
+                                        dark:bg-secondaire_claire dark:text-tertiaire_fonce
+                                        dark:hover:bg-tonic-dark_mode dark:focus:bg-secondaire_fonce`
                             }
                         }"
                         
@@ -76,7 +79,7 @@
                             input-class="peer sr-only"
                             options-class="my-3 flex gap-6"
                             outer-class="my-10"
-                            legend-class="font-catamaran font-semibold text-lg text-secondaire_fonce"
+                            legend-class="font-catamaran font-semibold text-lg text-secondaire_fonce dark:text-secondaire_claire"
                         >
 
                             <template #label="context">
@@ -102,11 +105,15 @@
                             outer-class="my-10"
                             legend-class="my-5 font-palatino-linotype font-bold italic text-secondaire_fonce text-lg md:text-xl"
                             options-class="w-max grid grid-cols-2 gap-x-3 gap-y-1"
-                            label-class="block w-max rounded bg-secondaire_fonce font-catamaran font-semibold text-tertiaire_claire 
+                            label-class="block w-max rounded font-catamaran font-semibold 
                                         px-5 py-2 text-base
                                         lg:text-lg
+                                        bg-secondaire_fonce text-tertiaire_claire 
                                         hover:bg-tonic 
-                                        peer-checked:bg-secondaire_claire peer-checked:text-tertiaire_fonce"
+                                        peer-checked:bg-secondaire_claire peer-checked:text-tertiaire_fonce
+                                        dark:bg-secondaire_claire dark:text-tertiaire_fonce
+                                        dark:hover-tonic-dark_mode
+                                        dark:peer-checked:bg-secondaire_fonce dark:peer-checked:text-tertiaire_claire"
                         />
 
                         <div class="my-10">
@@ -133,11 +140,15 @@
                                     input-class="peer sr-only"
                                     outer-class="mt-10"
                                     options-class="w-max grid grid-cols-2 gap-x-3 gap-y-1"
-                                    label-class="block w-max rounded bg-secondaire_fonce font-catamaran font-semibold text-tertiaire_claire 
+                                    label-class="block w-max rounded font-catamaran font-semibold
                                                 px-5 py-2 text-base
                                                 md:text-lg
+                                                bg-secondaire_fonce text-tertiaire_claire 
                                                 hover:bg-tonic 
-                                                peer-checked:bg-secondaire_claire peer-checked:text-tertiaire_fonce"
+                                                peer-checked:bg-secondaire_claire peer-checked:text-tertiaire_fonce
+                                                dark:bg-secondaire_claire dark:text-tertiaire_fonce
+                                                dark:hover-tonic-dark_mode
+                                                dark:peer-checked:bg-secondaire_fonce dark:peer-checked:text-tertiaire_claire"
                             />
                             
                         </div>
@@ -161,7 +172,6 @@
                             </boutonFonce>
 
                             <boutonClair
-                                type="button"
                                 @click="supprimerMontre()"
                                 class="mx-auto my-10 md:my20">
                                 Confirmer la suppression
