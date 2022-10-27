@@ -24,7 +24,11 @@
 
         <!--Si l'utilisateur est connecté-->
         <div v-if="user">
-            <h1>Bonjour {{user.email}}</h1>
+            <h1>Bonjour 
+                <span class="text-base sm:text-lg md:text-xl lg:text-2xl">
+                    {{user.email}}
+                </span>
+            </h1>
 
 
             <div>
