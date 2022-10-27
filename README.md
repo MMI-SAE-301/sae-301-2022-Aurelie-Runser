@@ -96,7 +96,7 @@ Noté sur 40.
     - 
 
 - Composants "accessibles" (0-1-2pts)
-  - [ ] textes "accessibles" (eg. 'sr-only')
+  - [X] textes "accessibles" (eg. 'sr-only')
   - [ ] Contenu accessible ET Usage de composants étudié pour accessibilité (Eg. HeadlessUI)
 
 [^1]: Supprimez les mentions inutiles.

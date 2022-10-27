@@ -22,7 +22,9 @@
 
       <div class="flex flex-wrap justify-between gap-x-20">
 
-        <listeMontres class="hidden lg:block" :max="1"/>
+        <div>
+          <listeMontres class="hidden lg:block" :max="1" sr-only="Exemple d'une montre créer par un utilisateur"/>
+        </div>
 
         <div class="basis-96 flex-auto flex flex-col gap-y-10">
           <p>

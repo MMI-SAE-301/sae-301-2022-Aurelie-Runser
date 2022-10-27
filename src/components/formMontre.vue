@@ -5,12 +5,13 @@
             
             <div class="sticky w-full md:w-80 lg:w-96 xl:w-auto
                     flex carousel">
-                <montreFace class="flex-initial basis-60 md:flex-none md:w-64 lg:w-72 carousel-item" v-bind="montre" id="face"/>
-                <montreProfil class="flex-initial basis-60 md:flex-none md:w-64 lg:w-72 carousel-item" v-bind="montre" id="dessus"/>
+                <montreFace class="flex-initial basis-60 md:flex-none md:w-64 lg:w-72 carousel-item" v-bind="montre" id="face" sr-only="Représentation de la montre que vous créez vue de face"/>
+                <montreProfil class="flex-initial basis-60 md:flex-none md:w-64 lg:w-72 carousel-item" v-bind="montre" id="dessus" sr-only="Représentation de la montre que vous créez vue de profil"/>
             </div>
         </div>
 
                 <div class="flex-initial basis-2/5">
+                    <p class="sr-only">Formulaire pour choisir les couleur et le matériau de votre montre</p>
 
                     <h2>Vos choix</h2>
                     <FormKit
