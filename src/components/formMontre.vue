@@ -117,12 +117,32 @@
                         />
 
                         <div class="my-10">
+                            <h2>Prix de votre montre</h2>
+
+                            <div class="flex gap-5 items-center my-5">
+                                <p class="font-palatino-linotype italic text-lg">10 000 €</p>
+
+                                <fleche class="h-10"/>
+
+                                <p class="font-palatino-linotype font-bold italic text-2xl">7 000€</p>
+
+
+                            </div>
+
+                            <p>
+                                <span>Réduction de 30%</span>
+                                sur l’achat de votre montre seulement si vous la commander avant le 31 décembre.
+                            </p>
+                        </div>
+
+                        <div class="my-10">
                             <h2>Commander dès maintenant</h2>
 
                             <p class="my-5">Garantis
                                 <span>livré avant noël</span>
                                 si vous commandez votre montre avant le 15 décembre.
                             </p>
+
                             <p class="my-5 font-extrabold">Satisfait ou Remboursé.</p>
 
 
@@ -197,6 +217,7 @@
 
     import boutonFonce from "@/components/boutonFonce.vue"
     import boutonClair from "@/components/boutonClair.vue"
+    import fleche from "@/components/icons/fleche.vue"
 
     const router = useRouter();
 
