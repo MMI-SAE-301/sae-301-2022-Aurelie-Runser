@@ -2,23 +2,15 @@
     <div class="px-5 md:px-20 pt-20">
 
         <!-- si l'utilisateur n'est pas connecté-->
-        <div v-if="!user">
+        <div class="min-h-screen" v-if="!user">
             <h1>Connexion</h1>
 
-            <button class="block my-14 mx-auto px-10 py-5 rounded-full border-2 
+            <button class="block my-40 mx-auto px-10 py-5 rounded-full border-2 
                         text-sm md:text-base 
                         border-black hover:bg-gray-200 text-tertiaire_fonce
                         dark:border-tertiaire_claire dark:hover:bg-gray-700 dark:text-tertiaire_claire"
                 @pointerdown="supabase.auth.signIn({provider: 'google'})">
                    Se connecter avec Google
-            </button>
-
-            <button class="block my-14 mx-auto px-10 py-5 rounded-full 
-                        text-sm md:text-base
-                        bg-blue-700 text-tertiaire_claire 
-                        hover:bg-blue-500"
-                @pointerdown="supabase.auth.signIn({provider: 'facebook'})">
-                    Se connecter avec Facebook
             </button>
         </div>
 
